@@ -1,7 +1,5 @@
 # DSC232R Data Exploration
 
-Group project for DSC232R.
-
 ## Dataset
 
 **Dataset link:** [Smart Bee Colony Monitor: Clips of Beehive Sounds](https://www.kaggle.com/datasets/annajyang/beehive-sounds)
