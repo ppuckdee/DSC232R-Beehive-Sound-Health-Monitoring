@@ -23,19 +23,6 @@ This project would be difficult to complete on a laptop because the dataset is v
 
 ## SDSC Expanse Setup
 
-We used SDSC Expanse with JupyterLab for this project.
-
-- Account: TG-SEE260003
-- Partition: shared
-- Time limit: 120 minutes
-- Cores: 8
-- Memory per node: 128GB
-- GPUs: 0
-- Singularity image: `~/esolares/singularity_images/spark_py_latest_jupyter_dsc232r.sif`
-- Module: `singularitypro`
-
-## SDSC Expanse Setup
-
 We used SDSC Expanse JupyterLab with 8 cores and 128GB memory per node.
 
 ### SparkSession Configuration
