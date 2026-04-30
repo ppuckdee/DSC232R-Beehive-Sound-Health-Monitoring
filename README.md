@@ -64,7 +64,8 @@ We chose 16 cores and 32GB because:
   
 ### Spark UI Screenshot
 
-Placeholder: Insert Spark UI screenshot here.
+<img width="1124" height="342" alt="image" src="https://github.com/user-attachments/assets/d7c2048c-7d70-42d9-b12e-fc7500bbfc1a" />
+
 
 
 
