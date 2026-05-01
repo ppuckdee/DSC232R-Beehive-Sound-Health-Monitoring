@@ -95,12 +95,12 @@ Since the dataset contains `.wav` audio files, we may also extract audio feature
 #### Spark Operations
 
 We plan to use the following Spark operations and tools: 
-dropna()
-fillna()
-dropDuplicates()
-groupBy().agg()
-StringIndexer
-OneHotEncoder
-VectorAssembler
-StandardScaler
+- dropna()
+- fillna()
+- dropDuplicates()
+- groupBy().agg()
+- StringIndexer
+- OneHotEncoder
+- VectorAssembler
+- StandardScaler
 
