@@ -71,4 +71,28 @@ We chose 16 cores and 32GB because:
 
 
 ### Preprocessing Plan
-1A. Since the column `gust_speed` has 994 nulls (approx 78% of the dataset), we will drop this column. There is not enough data to compute anything meaningful. Additionally, `weather temp`, `wind speed`, `lat`, `long` have nulls but only 4 each. Thus, this can be computed to get meaningful conclusions but will need to be computed with the mean. 
+
+#### Missing Values
+
+The column `gust speed` has 994 null values, which is about 78% of the dataset. Since most of this column is missing, we plan to drop it.
+
+The columns `weather temp`, `wind speed`, `lat`, and `long` only have 4 null values each. Since this is a small amount, we plan to fill these missing values using the mean.
+
+#### Data Imbalance
+
+The target column has 6 classes. Some classes have more rows than others. Class 5 has the most rows, and class 1 has the fewest rows.
+
+To handle this, we may use class weights, oversampling, or undersampling. We will also use precision, recall, and F1-score instead of only accuracy.
+
+#### Transformations
+
+We will convert categorical columns into numbers. These include columns like `device`, `hive number`, `queen presence`, `queen acceptance`, `queen status`, and `weatherID`.
+
+We will scale numeric columns such as `hive temp`, `hive humidity`, `weather temp`, `wind speed`, and `cloud coverage`.
+
+Since the dataset contains `.wav` audio files, we may also extract audio features such as MFCCs, pitch, volume, and frequency features. These features can help the model learn patterns in beehive sounds.
+
+#### Spark Operations
+
+We plan to use the following Spark operations and tools:
+
