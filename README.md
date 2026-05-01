@@ -82,7 +82,7 @@ The columns `weather temp`, `wind speed`, `lat`, and `long` only have 4 null val
 
 The target column has 6 classes. Some classes have more rows than others. Class 5 has the most rows, and class 1 has the fewest rows.
 
-To handle this, we may use class weights, oversampling, or undersampling. We will also use precision, recall, and F1-score instead of only accuracy.
+To handle this, we may use class weights, oversampling, or undersampling. 
 
 #### Transformations
 
