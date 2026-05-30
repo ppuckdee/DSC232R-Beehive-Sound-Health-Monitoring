@@ -119,14 +119,7 @@ This model is simpler than the Decision Tree from Milestone 3 because PCA reduce
 
 The PCA + Logistic Regression model shows that dimensionality reduction can make the dataset smaller while still allowing us to classify bee colony health.
 
-However, PCA does not know which features are most useful for the health labels, so it may remove some important information. To improve this model, we could test more PCA component values and try other classifiers after PCA.
-
-### Improvements
-
-**Try different PCA component values** to find the best balance between reducing features and keeping accuracy.
-
-**Compare PCA results to the full feature set** to see whether dimensionality reduction helped or hurt performance.
-
+To improve this model, we could test different numbers of PCA components and compare Logistic Regression with other models.
 
 ### Speedup Analysis
 
