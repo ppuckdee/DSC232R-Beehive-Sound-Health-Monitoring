@@ -119,6 +119,10 @@ The PCA notebook also compares training and test performance across different nu
 
 This model is simpler than the Decision Tree from Milestone 3 because PCA reduces the number of features before Logistic Regression. This means it is less likely to overfit, but it could underfit if too much useful information was removed.
 
+#### Training vs. Test Error
+
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/c52720b8-d80a-4e50-8a39-f68ce3cb73f4" />
+
 ### Conclusion
 
 The PCA + Logistic Regression model shows that dimensionality reduction can make the dataset smaller while still allowing us to classify bee colony health.
