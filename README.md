@@ -133,6 +133,11 @@ To improve this model, we could test different numbers of PCA components and com
 
 We measured the performance of our feature engineering pipeline (data loading → preprocessing → aggregation) across different executor configurations.
 
+#### Strong Scaling Analysis
+
+<img width="1289" height="495" alt="image" src="https://github.com/user-attachments/assets/3038a522-c872-4317-a846-5e178693c632" />
+
+
 ### Methodology
 - Dataset: 23.21GB Parquet files
 - Operation: Full preprocessing pipeline
