@@ -138,6 +138,15 @@ pipeline = Pipeline(stages=[pca, lr])
 
 The reason we tried this model after the Decision Tree is that PCA removes correlated and noisy features before classification, which helps prevent the model from memorizing the training data.
 
+### Model 3: Unsupervised Acoustic State Analysis
+
+In addition to the supervised PCA model, we performed an unsupervised analysis to investigate whether beehive recordings naturally organize into recurring acoustic states. This analysis was motivated by the idea that a hive may have a “sound language”: different combinations of loudness, frequency content, and timbral texture may correspond to different hive conditions even before labels are used.
+
+To avoid clustering on metadata artifacts, we used only audio-derived features: RMS energy, spectral centroid, spectral rolloff, zero-crossing rate, and MFCC coefficients. We first applied PCA to reduce these audio features into a smaller set of principal components. This made the clustering problem easier to interpret and reduced the effect of correlated audio features. We then trained KMeans models across several values of k and evaluated cluster quality using silhouette score.
+
+The acoustic-state analysis gives a different view of the data than the supervised classifier. The supervised model asks whether known health labels can be predicted. The unsupervised model asks whether the audio itself contains repeated sound patterns. After clustering, we compared each acoustic state against the known target labels. If certain clusters contain mostly one health condition, that suggests the hive condition has a recognizable acoustic signature. If clusters contain mixed labels, that suggests the audio patterns overlap and that additional temporal, environmental, or higher-resolution audio features may be needed.
+
+This analysis supports the broader goal of the project because it treats hive audio as more than a standard classification input. It attempts to identify hidden sound states that could eventually help beekeepers monitor hive behavior even when labeled examples are limited.
 ---
 
 ## Results
@@ -312,5 +321,5 @@ We would choose Spark for tabular statistics and preprocessing. Ray would be the
 
 - Snigdha Tiwari: Contributor: Did data exploration, preprocessing, final repo cleanup, extra credit
 - Adham Kamel: Contributor: Did the data visualization, training of the first DecisionTree model, as well as the speedup analysis for the PCA model
-- Patcharapol Puckdee: Title: Contributed to documentation, including the README and write-up, and supported team collaboration through feedback and communication.
-- Conner Houghtby: Title: Contribution
+- Patcharapol Puckdee: Contributor: Did the documentation, including the README and write-up, and supported team collaboration through feedback and communication.
+- Conner Houghtby: Contributor: Did 
